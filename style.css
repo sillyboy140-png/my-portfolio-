@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background: #111827;
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #60a5fa;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 80px 20px;
+}
+
+.hero img {
+    width: 180px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 5px solid white;
+}
+
+.hero h2 {
+    font-size: 42px;
+}
+
+.hero span {
+    color: #fbbf24;
+}
+
+.hero p {
+    margin: 20px 0;
+}
+
+.btn {
+    display: inline-block;
+    background: #fbbf24;
+    color: #111;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section {
+    padding: 100px 0;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.bg-light {
+    background: #f5f5f5;
+}
+
+.skills-grid,
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.skill-card,
+.project-card {
+    background: white;
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.skill-card:hover,
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 15px 0;
+    font-size: 18px;
+}
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media(max-width:768px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        background: #111827;
+        flex-direction: column;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+}
